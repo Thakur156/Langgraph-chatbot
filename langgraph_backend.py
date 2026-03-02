@@ -16,7 +16,7 @@ class ChatState(TypedDict):
     messages : Annotated[list[BaseMessage],add_messages]
 
 
-
+config={"configurable":{"thread_id":"1"}}
 
 model=ChatGroq(model="qwen/qwen3-32b", reasoning_format="hidden")
 
@@ -43,6 +43,19 @@ graph.add_edge("chat_node",END)
 
 
 Chatbot=graph.compile(checkpointer=checkpointer)
+
+
+
+
+ 
+for chunk, metadata in Chatbot.stream(
+    {'messages':[HumanMessage(content="write 500 words. essage on ai ")]},
+    config=config,
+    stream_mode="messages"
+):
+     if chunk.content:
+        print(chunk.content, end=" ", flush=True)
+
 
 
 
