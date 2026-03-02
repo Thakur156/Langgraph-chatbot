@@ -1,0 +1,12 @@
+ipykernel
+langchain
+dotenv
+langchain_community
+langchain_openai
+langchain-anthropic
+langchain_core
+langgraph
+youtube-search-python
+youtube-search
+langchain-groq
+streamlit
