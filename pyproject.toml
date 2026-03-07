@@ -14,6 +14,7 @@ dependencies = [
     "langchain-groq>=1.1.2",
     "langchain-openai>=1.1.10",
     "langgraph>=1.0.10",
+    "langgraph-checkpoint-sqlite>=3.0.3",
     "streamlit>=1.54.0",
     "youtube-search>=2.2.0",
     "youtube-search-python>=1.6.6",
