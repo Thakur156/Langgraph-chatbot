@@ -48,14 +48,25 @@ Chatbot=graph.compile(checkpointer=checkpointer)
 
 
  
-for chunk, metadata in Chatbot.stream(
-    {'messages':[HumanMessage(content="write 500 words. essage on ai ")]},
-    config=config,
-    stream_mode="messages"
-):
-     if chunk.content:
-        print(chunk.content, end=" ", flush=True)
+# for chunk, metadata in Chatbot.stream(
+#     {'messages':[HumanMessage(content="write 500 words. essage on ai ")]},
+#     config=config,
+#     stream_mode="messages"
+# ):
+#      if chunk.content:
+#         print(chunk.content, end=" ", flush=True)
 
 
 
 
+# Chatbot.invoke(
+#     {'messages':[HumanMessage(content="what is 2+2")]},
+#     config=config,
+#     stream_mode="messages"
+# )
+
+
+# state=Chatbot.get_state(config={"configurable":{"thread_id":"1"}})
+
+
+# print ('statee.......',state.values['messages'])
