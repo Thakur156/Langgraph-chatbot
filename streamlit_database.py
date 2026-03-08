@@ -102,7 +102,7 @@ if user_input:
    
 
     with st.chat_message("assistant"):
-        config={"configurable":{"thread_id":st.session_state['thread_id']}}
+        config={"configurable":{"thread_id":st.session_state['thread_id']},"run_name":'chat_turn'}
         ai_message= st.write_stream(
             message_chunk.content for message_chunk ,metadata in  Chatbot.stream(
                 {'messages':[HumanMessage(content=user_input)]},
