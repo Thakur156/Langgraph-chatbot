@@ -11,3 +11,5 @@ youtube-search
 langchain-groq
 streamlit
 ddgs
+asyncio
+langchain_mcp_adapters
